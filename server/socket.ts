@@ -30,9 +30,7 @@ io.on("connection", (socket: Socket) => {
   });
 
   socket.on("sendMessage", async (data: { from_auth: string, text: string }) => {
-    console.log(data)
     await messageBlade.add(data.from_auth, data.text).then(async (msg) => {
-        console.log("new message detected")
         const _msg = {
             from_id: (msg as any).message.from_id,
             text: (msg as any).message.text,
