@@ -75,7 +75,6 @@ if (thatsme['status'] == False):
     print(colorkits.rgbaToAnsiFg(255, 0, 0) + f"[!] invalid auth token, run this to signup again: rm {os.path.join(__dirname, ".authentication_of_service")}" + colorkits.getReset())
     exit(0)
 
-MAX_MESSAGES = 2000
 user_colors = {}
 user_colors[thatsme['result']['id']] = [
     random.randint(0, 255),
